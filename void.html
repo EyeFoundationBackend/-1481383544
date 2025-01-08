@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cells</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #000;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #8B0000;
+            color: #000;
+            border: 2px solid #8B0000;
+            font-family: 'Courier New', monospace;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #8B0000, 0 0 5px #FF0000;
+            z-index: 1000; /* Ensures it's on top of all content */
+            font-size: 1.1em;
+        }
+
+        .back-button:hover {
+            background-color: #000;
+            color: #8B0000;
+            border-color: #FF0000;
+            box-shadow: 0 0 20px #FF0000;
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+
+        .hiden {
+	    font-size: 100px;
+	}
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    
+    <p class="hiden">Hidden stuff</p>
+    
+    <script>
+        alert("Not high enough access level to release Cell " + cellNumber + "!");
+
+        function goBack() {
+            window.location.href = "https://eyefoundationbackend.github.io/-1481383544/h";
+        }
+    </script>
+</body>
+</html>
