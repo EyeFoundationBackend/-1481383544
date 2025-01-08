@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cells</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #8B0000;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cell {
+            background-color: #111;
+            border: 2px solid #8B0000;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px #8B0000, 0 0 20px #FF0000;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell .image-placeholder {
+            font-size: 1.5em;
+            color: #8B0000;
+            text-transform: uppercase;
+        }
+
+        .cell button {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #555; /* Initial grayed-out color */
+            color: #fff;
+            border: 2px solid #555;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: not-allowed;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #8B0000, 0 0 5px #FF0000;
+            pointer-events: none; /* Prevent clicks */
+        }
+
+        .cell button.active {
+            background-color: #8B0000; /* Active color */
+            color: #fff;
+            border: 2px solid #8B0000;
+            cursor: pointer;
+            pointer-events: auto; /* Enable clicking */
+        }
+
+        .cell button:hover {
+            background-color: #000;
+            color: #8B0000;
+            border-color: #FF0000;
+            box-shadow: 0 0 20px #FF0000;
+        }
+
+        .cell button:active {
+            transform: scale(0.95);
+        }
+
+        /* Back button styles */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #555;
+            color: #fff;
+            border: 2px solid #555;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #8B0000, 0 0 5px #FF0000;
+        }
+
+        .back-button:hover {
+            background-color: #000;
+            color: #8B0000;
+            border-color: #FF0000;
+            box-shadow: 0 0 20px #FF0000;
+        }
+
+        .back-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    
+    <div class="container">
+        <div class="cell">
+            <div class="image-placeholder">Need Higher Access Level</div>
+            <button class="access-btn" onclick="releaseContent(1)">Release</button>
+        </div>
+        <div class="cell">
+            <div class="image-placeholder">Need Higher Access Level</div>
+            <button class="access-btn" onclick="releaseContent(2)">Release</button>
+        </div>
+        <div class="cell">
+            <div class="image-placeholder">Need Higher Access Level</div>
+            <button class="access-btn" onclick="releaseContent(3)">Release</button>
+        </div>
+        <div class="cell">
+            <div class="image-placeholder">Need Higher Access Level</div>
+            <button class="access-btn" onclick="releaseContent(4)">Release</button>
+        </div>
+    </div>
+
+    <script>
+        function releaseContent(cellNumber) {
+            alert("Not high enough access level to release Cell " + cellNumber + "!");
+        }
+
+        function goBack() {
+            window.location.href = "https://www.example.com";
+        }
+    </script>
+</body>
+</html>
