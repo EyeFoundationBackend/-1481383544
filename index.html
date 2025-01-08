@@ -123,5 +123,35 @@
     <footer>
         Unauthorized access is strictly prohibited.
     </footer>
+    <script>
+    
+    const paragraphs = document.querySelectorAll('p');
+    const buttons = document.querySelectorAll('.button');
+
+    // Hide all paragraphs initially
+    paragraphs.forEach(paragraph => {
+        paragraph.style.display = 'none';
+    });
+    
+    // Hide all buttons initially
+    buttons.forEach(button => {
+        button.style.display = 'none';
+    });
+
+    // Show each paragraph with a 1-second delay
+    paragraphs.forEach((paragraph, index) => {
+        setTimeout(() => {
+            paragraph.style.display = 'block';
+        }, index * 1000); // Delay increases by 1 second for each paragraph
+    });
+
+    // Show the buttons 1 second after the last paragraph is shown
+    setTimeout(() => {
+        buttons.forEach(button => {
+            button.style.display = 'inline-block'; // Show buttons
+        });
+    }, paragraphs.length * 1000); // Delay: after all paragraphs have shown + 1 second
+     
+    </script>
 </body>
 </html>
